@@ -25,6 +25,8 @@
     "hapi-bluebird": "^2.0.0",
     "inert": "^4.2.0",
     "joi": "^10.6.0",
+    "moment": "^2.18.1",
+    "querystring": "^0.2.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "scooter": "^4.0.0"

@@ -1,14 +1,14 @@
 'use strict';
 
 const Boom = require('boom');
-const AirlineService = require('../services/airlines');
+const AirlineService = require('../services/Airline');
 
 module.exports = function () {
   return function (request, reply) {
     return AirlineService.findAll()
       .then(airlines => {
         if (!airlines) {
-          return reply(Boom.badImplementation());
+          throw new Error('Airlines not found');
         }
         return reply(airlines).code(200)
           .header('x-csrf-token', request.server.plugins.crumb.generate(request, reply))
