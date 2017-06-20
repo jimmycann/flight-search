@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon index.js",
+    "a": "./node_modules/.bin/nodemon index.js"
+  },
   "dependencies": {
     "acquaint": "^1.4.1",
     "babel-preset-env": "^1.5.2",
@@ -33,6 +37,7 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.11.0",
     "sinon": "^2.3.4"
   }
 }
