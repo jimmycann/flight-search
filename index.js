@@ -1,36 +1,13 @@
 'use strict';
 
-const Bluebird = require('bluebird');
-const Hapi = require('hapi');
-require('hapi-bluebird');
+const Composer = require('./config/composer');
 
-const server = new Hapi.Server({ debug: { request: ['error'] } });
+Composer((err, server) => {
+  if (err) { throw err; }
 
-const plugins = [
-    // {
-    //     register: require('./routes/.js'),
-    //     options: {
-    //         database: database
-    //     }
-    // }
-];
+  server.start(err => {
+    if (err) { throw err; }
 
-server.connection({
-  host: 'localhost',
-  port: 8888
+    console.log(`✅  Server is listening at localhost:${server.info.port}`);
+  });
 });
-
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply('Hello, world!');
-  }
-});
-
-server.register(plugins)
-  .then(() => server.start())
-  .then(() => server.log('info', 'Server running at: ' + server.info.uri))
-  .catch(err => { throw err });
-
-module.exports = server;
