@@ -1,0 +1,22 @@
+{
+  "name": "flight-search-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "serve": "./node_modules/.bin/webpack --config webpack.config.js --progress --watch",
+    "a": "./node_modules/.bin/webpack --config webpack.config.js --progress --watch"
+  },
+  "devDependencies": {
+    "component-webpack-plugin": "^0.2.1",
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "zepto": "^1.2.0",
+    "zepto-webpack": "^1.2.1"
+  }
+}

@@ -19,6 +19,8 @@
     "request": true,
     "expect": true,
     "afterAll": true,
-    "sinon": true
+    "sinon": true,
+    "webpack": true,
+    "$": true
   }
 }
