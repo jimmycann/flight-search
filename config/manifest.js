@@ -9,7 +9,7 @@ const internals = {
   errorhOptions: {
     errorFiles: {
       404: `${process.cwd()}/public/404.html`,
-      default: '50x.html'
+      default: `${process.cwd()}/public/50x.html`
     },
     staticRoute: {
       path: '/{path*}',
@@ -58,8 +58,8 @@ const store = new Confidence.Store({
       plugin: {
         register: 'acquaint',
         options: {
-          routes: [{ includes: ['api/routes/**/*.js'] }]
-          // handlers: [{ includes: ['server/handlers/**/*.js'] }]
+          routes: [{ includes: ['api/routes/**/*.js'] }],
+          handlers: [{ includes: ['api/handlers/**/*.js'] }]
         }
       }
     },
