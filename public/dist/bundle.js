@@ -1745,6 +1745,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // $('.inner').on('click', () => airports.search('melb'));
 $('form').append(__WEBPACK_IMPORTED_MODULE_1__components_autocomplete___default.a.build('from', 'Where are you leaving from?', 'Depart'));
 $('form').append(__WEBPACK_IMPORTED_MODULE_1__components_autocomplete___default.a.build('to', 'What is your destination?', 'Arrive'));
+$('form').append(__WEBPACK_IMPORTED_MODULE_1__components_autocomplete___default.a.build('date', 'When are you leaving? (DD-MM-YYYY)', 'Date'));
 
 $('#search-flights').click(() => __WEBPACK_IMPORTED_MODULE_4__model_flights__["a" /* default */].search());
 
