@@ -16,6 +16,7 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "bootstrap": "^3.3.7",
     "zepto": "^1.2.0",
     "zepto-webpack": "^1.2.1"

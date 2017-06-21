@@ -3,10 +3,10 @@
 import Bluebird from 'bluebird';
 
 export default {
-  search: function (input) {
+  findAll: function () {
     return new Bluebird((resolve, reject) => $.ajax({
       type: 'GET',
-      url: `/api/v1/airports/${input}`,
+      url: `/api/v1/airlines`,
       dataType: 'json',
       timeout: 10000,
       context: $('body'),
