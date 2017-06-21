@@ -9,7 +9,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'zepto-webpack'
+      $: 'zepto-webpack',
+      jQuery: 'zepto-webpack'
     })
   ],
   module: {

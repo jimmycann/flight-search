@@ -41,7 +41,6 @@ const store = new Confidence.Store({
   registrations: [
     { plugin: 'inert' },
     { plugin: 'scooter' },
-    { plugin: 'blankie' },
     {
       plugin: {
         register: 'errorh',

@@ -13,7 +13,7 @@ module.exports = [{
   path: '/{param*}',
   handler: {
     directory: {
-      path: path.join(process.cwd(), 'public', 'dist'),
+      path: path.join(process.cwd(), 'public'),
       listing: true
     }
   }

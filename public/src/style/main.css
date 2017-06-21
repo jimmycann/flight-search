@@ -1,3 +1,16 @@
 body {
-  background-color: 'papaya-white'
+  background-color: papayawhip
+}
+
+.main > h1 {
+  margin-bottom: 20px;
+}
+
+form > .ac {
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+span.input-group-addon {
+  min-width: 100px;
 }
