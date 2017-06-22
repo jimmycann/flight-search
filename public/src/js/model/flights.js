@@ -3,10 +3,12 @@
 import Bluebird from 'bluebird';
 
 import Airlines from './airlines';
+import results from '../components/results';
 
 export default {
   search: function () {
     const query = this.buildQuery();
+    results.build();
 
     return Airlines.findAll()
       .then(airlines => Bluebird.all(airlines.map(al => this.airlineFlightSearch(query))));
