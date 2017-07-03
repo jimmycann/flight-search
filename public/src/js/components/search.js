@@ -1,6 +1,7 @@
 'use strict';
 
 import autocomplete from './autocomplete';
+import flights from '../model/flights';
 
 export default {
   inner: function () {
@@ -20,6 +21,14 @@ export default {
     return $('<form />');
   },
 
+  buildQuery: function () {
+    return Object.assign({}, {
+      from: $('input[name=from]').val(),
+      to: $('input[name=to]').val(),
+      date: $('input[name=date]').val()
+    });
+  },
+
   build: function () {
     $('.inner').remove();
 
@@ -33,5 +42,14 @@ export default {
 
     inner.append(form);
     $('.main').append(inner);
+
+    $('#search-flights').click(() => {
+      return flights.search(this.buildQuery())
+        .then(console.log)
+        .catch(err => {
+          console.error(err);
+          return this.build();
+        });
+    });
   }
 };

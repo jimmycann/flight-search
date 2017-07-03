@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
+    "moment": "^2.18.1",
     "zepto": "^1.2.0",
     "zepto-webpack": "^1.2.1"
   }
