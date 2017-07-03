@@ -4,7 +4,7 @@ const Confidence = require('confidence');
 
 const internals = {
   defaults: {
-    port: process.env.PORT || 8888
+    port: process.env.PORT || 3000
   },
   errorhOptions: {
     errorFiles: {
