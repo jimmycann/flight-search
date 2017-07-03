@@ -10,7 +10,7 @@ module.exports = {
   search: function (airline, { to, from, date }) {
     const outbound = moment(date).format('YYYY-MM-DD');
 
-    return request.get(`http://node.locomote.com/code-task/flight_search/${airline}?${qs.stringify({ to, from, date: outbound })}`);
+    return request.get(`http://node.locomote.com/code-task/flight_search/${airline}?${qs.stringify({ to: to.toUpperCase(), from: from.toUpperCase(), date: outbound })}`);
   },
 
   returnCheapest: function (results) {
