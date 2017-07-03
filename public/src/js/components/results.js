@@ -10,6 +10,15 @@ export default {
     return $('<div />', { class: className, text });
   },
 
+  loading: function () {
+    $('.inner').remove();
+
+    const inner = this.div('inner');
+    inner.append($('<p />', { text: 'Loading...' }));
+
+    $('.main').append(inner);
+  },
+
   flightTile: function (flt) {
     return this.div('panel panel-default')
       .append(this.div('panel-heading', `${flt.airline.name} ${flt.airline.code}${flt.flightNum} - From $${flt.price}AUD`));

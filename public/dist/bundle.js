@@ -23828,6 +23828,8 @@ module.exports = {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   search: function (query) {
+    __WEBPACK_IMPORTED_MODULE_3__components_results__["a" /* default */].loading();
+
     return __WEBPACK_IMPORTED_MODULE_2__airlines__["a" /* default */].findAll()
       .then(airlines => __WEBPACK_IMPORTED_MODULE_0_bluebird___default.a.all(airlines.map(al => this.airlineFlightSearch(query, al.code))))
       .then(flights => this.sortAscPrice(flights))
@@ -24160,6 +24162,15 @@ exports.clearImmediate = clearImmediate;
 /* harmony default export */ __webpack_exports__["a"] = ({
   div: function (className, text = null) {
     return $('<div />', { class: className, text });
+  },
+
+  loading: function () {
+    $('.inner').remove();
+
+    const inner = this.div('inner');
+    inner.append($('<p />', { text: 'Loading...' }));
+
+    $('.main').append(inner);
   },
 
   flightTile: function (flt) {

@@ -8,6 +8,8 @@ import results from '../components/results';
 
 export default {
   search: function (query) {
+    results.loading();
+
     return Airlines.findAll()
       .then(airlines => Bluebird.all(airlines.map(al => this.airlineFlightSearch(query, al.code))))
       .then(flights => this.sortAscPrice(flights))
